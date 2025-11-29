@@ -1,0 +1,20 @@
+# Dedalus Labs deployment configuration
+name: neurofocus-smart-tank
+version: 1.0.0
+
+runtime:
+  python: "3.11"
+
+environment:
+  - MONGODB_URI
+  - MONGODB_DATABASE
+
+health_check:
+  enabled: true
+  path: /health
+  interval: 30
+
+resources:
+  memory: 512MB
+  cpu: 0.5
+
